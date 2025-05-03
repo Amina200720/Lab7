@@ -1,0 +1,12 @@
+with open("massiv.txt", "w") as f:
+    massiv = [3, -1, 7, 0, -5, 10, 8, -2]  
+    f.write(" ".join(map(str, massiv)))
+with open("massiv.txt", "r") as f:
+    ədəd_sətiri = f.read()
+    ədədlər = list(map(int, ədəd_sətiri.split()))
+müsbət_ədədlər = [x for x in ədədlər if x > 0]
+cem = sum(müsbət_ədədlər)
+with open("musbetler.txt", "w") as f:
+    f.write(" ".join(map(str, müsbət_ədədlər)))
+print("Müsbət ədədlər:", müsbət_ədədlər)
+print("Müsbət ədədlərin cəmi:", cem)
